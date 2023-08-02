@@ -1,42 +1,52 @@
-/* Reset default list styles for the navigation bar */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  font-family: 'logoFont';
+  font-size: 40px;
+  padding-left: 30px;
+}
+
+#active {
+  color: rgb(161, 161, 0);
+}
+
+.navBar {
+  float: right;
+}
+
 .navBar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  padding-right: 60px;
 }
 
-/* Style for navigation bar links */
+.navBar li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
 .navBar a {
-  display: block;
-  text-align: center;
   text-decoration: none;
   color: white;
   padding: 14px 16px;
   transition: color 0.5s;
+  font-size: 30px;
 }
 
-/* Background color for the body */
-body {
-  background-color: black;
-}
-
-/* Style for the active link */
-#active {
-  color: yellow;
-}
-
-/* Hover effect for navigation bar links */
 .navBar a:hover {
   color: yellow;
   transition: color 1s;
 }
 
-/* Display navigation bar items horizontally */
-.navBar li {
-  display: inline-block;
-}
-
-h1 {
-    color: white;
+@font-face {
+  font-family: 'logoFont';
+  src: url('fonts/ShortBaby-Mg2w.ttf') format('truetype'); /* Replace with the actual path to your font file */
 }
