@@ -5,11 +5,10 @@ background-color: black;
 }
 
 .logo {
-font-size: 24px;
 font-weight: bold;
 color: white;
 font-family: 'logoFont';
-font-size: 40px;
+font-size: 50px;
 padding-left: 30px;
 }
 
@@ -25,7 +24,7 @@ float: right;
 list-style: none;
 margin: 0;
 padding: 0;
-padding-right: 80px;
+padding-right: 100px;
 }
 
 .navBar li {
@@ -38,7 +37,7 @@ text-decoration: none;
 color: white;
 padding: 14px 16px;
 transition: color 0.5s;
-font-size: 20px;
+font-size: 25px;
 font-family: 'navFont';
 }
 
@@ -53,6 +52,7 @@ color: white;
 clear: both;
 /* Add some padding to separate it from the navbar */
 padding-top: 20px;
+font-family: pFont;
 }
 
 @font-face {
@@ -62,5 +62,10 @@ src: url('fonts/Crudex.ttf') format('truetype');
 
 @font-face {
 font-family: 'navFont';
-src: url('fonts/Daydream.ttf') format('truetype');
+src: url('fonts/KOMIKAX_.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'pFont';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    }
