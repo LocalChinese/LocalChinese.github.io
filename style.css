@@ -1,82 +1,105 @@
+/* Stili comuni per entrambe le visualizzazioni */
 body {
-margin: 0;
-padding: 0;
-background-color: black;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
 .logo {
-font-weight: bold;
-color: white;
-font-family: 'logoFont';
-font-size: 50px;
-padding-left: 30px;
+  font-weight: bold;
+  color: white;
+  font-family: 'logoFont';
+  font-size: 50px;
+  padding-left: 30px;
 }
 
 #active {
-color: #000066;
+  color: #000066;
 }
 
 .navBar {
-float: right;
-background-color: #4a148c;
-padding-left: 20px;
-padding-top: 15px;
-padding-bottom: 20px;
-border-radius: 50px;
-margin-right: 100px;
+  float: right;
+  background-color: #4a148c;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-radius: 50px;
+  margin-right: 100px;
 }
 
 .navBar ul {
-list-style: none;
-margin: 0;
-padding: 0;
-padding-right: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 30px;
 }
 
 .navBar li {
-display: inline-block;
-margin-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .navBar a {
-text-decoration: none;
-color: white;
-padding: 14px 16px;
-transition: color 0.5s;
-font-size: 25px;
-font-family: 'navFont';
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+  transition: color 0.5s;
+  font-size: 25px;
+  font-family: 'navFont';
 }
 
 .navBar a:hover {
-color: #000080;
-transition: color 1s;
+  color: #000080;
+  transition: color 1s;
 }
 
 p {
-color: white;
-/* Clear the float to move below the navBar */
-clear: both;
-/* Add some padding to separate it from the navbar */
-padding-top: 20px;
-font-family: pFont;
+  color: white;
+  /* Clear the float to move below the navBar */
+  clear: both;
+  /* Add some padding to separate it from the navbar */
+  padding-top: 20px;
+  font-family: 'pFont';
+}
+
+/* Definizione dei font personalizzati */
+@font-face {
+  font-family: 'logoFont';
+  src: url('fonts/Crudex.ttf') format('truetype');
 }
 
 @font-face {
-font-family: 'logoFont';
-src: url('fonts/Crudex.ttf') format('truetype');
+  font-family: 'navFont';
+  src: url('fonts/KOMIKAX_.ttf') format('truetype');
 }
 
 @font-face {
-font-family: 'navFont';
-src: url('fonts/KOMIKAX_.ttf') format('truetype');
+  font-family: 'pFont';
+  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'pFont';
-    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-    }
+/* Media query per dispositivi mobili */
+@media (max-width: 767px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 20px;
+  }
 
-.bioDiv {
-    padding: 20px;
-    margin-top: 20px; /* Aggiunge uno spazio sopra il bioDiv */
+  .navBar {
+    float: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .navBar li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navBar a {
+    padding: 10px;
+    font-size: 20px;
+  }
 }
