@@ -5,6 +5,41 @@ body {
   background-color: black;
 }
 
+#container {
+  padding-left: 20px; /* Add padding around the container to separate content from the edge */
+}
+
+#container > * {
+  margin-left: 50px; /* Add a margin to all direct child elements inside the container */
+}
+
+footer{
+  margin-top: 100px;
+  background-color: #4a148c;
+  text-align: center;
+  padding: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 20px;
+  opacity: 0.5;
+}
+
+footer p {
+  padding-top: 0;
+}
+
+h1 {
+  clear: both;
+  color: white;
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  font-size:40px;
+  clear: both;
+}
+
 .logo {
   font-weight: bold;
   color: white;
