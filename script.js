@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.id = 'overlay';
         const overlayContent = document.createElement('div');
         overlayContent.classList.add('overlay-content');
-        overlayContent.innerHTML = '? ykwim...';
+        overlayContent.innerHTML = 'YOU MADE IT!';
         overlay.appendChild(overlayContent);
         document.body.appendChild(overlay);
     }    
@@ -56,17 +56,56 @@ document.addEventListener('DOMContentLoaded', () => {
             createOverlay();
             const overlay = document.getElementById('overlay');
             if (overlay) overlay.style.display = 'flex';
+            audio.play();
         } else if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
             // Ctrl+U pressed
             e.preventDefault();
             createOverlay();
             const overlay = document.getElementById('overlay');
             if (overlay) overlay.style.display = 'flex'; // Show overlay if hidden
+            audio.play();
         }
     });
-      
+
+    // Initial overlay setup
+    const continueButton = document.createElement('button');
+    continueButton.id = 'continue-button';
+    continueButton.textContent = 'Click to Continue';
+    continueButton.style.position = 'absolute';
+    continueButton.style.top = '50%';
+    continueButton.style.left = '50%';
+    continueButton.style.transform = 'translate(-50%, -50%)';
+    continueButton.style.padding = '10px 20px';
+    continueButton.style.fontSize = '16px';
+    continueButton.style.cursor = 'pointer';
+    continueButton.style.zIndex = '1001';
+    continueButton.style.color = 'white';
+    continueButton.style.backgroundColor = 'rgba(0,0,0,0.7)';
+    continueButton.style.border = 'none';
+    continueButton.style.borderRadius = '5px';
+
+    const initialOverlay = document.createElement('div');
+    initialOverlay.id = 'initial-overlay';
+    initialOverlay.style.position = 'fixed';
+    initialOverlay.style.top = '0';
+    initialOverlay.style.left = '0';
+    initialOverlay.style.width = '100%';
+    initialOverlay.style.height = '100%';
+    initialOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    initialOverlay.style.display = 'flex';
+    initialOverlay.style.justifyContent = 'center';
+    initialOverlay.style.alignItems = 'center';
+    initialOverlay.style.zIndex = '1000';
+    initialOverlay.appendChild(continueButton);
+
+    document.body.appendChild(initialOverlay);
+
+    continueButton.addEventListener('click', () => {
+        initialOverlay.style.display = 'none';
+    });
 
     // Prevent context menu from showing on right-click
     document.addEventListener('contextmenu', event => event.preventDefault());
 });
 
+var audio = new Audio('just_an_audio.mp3');
